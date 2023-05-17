@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+/* global css start */
+
+:root {
+    --primary-color: #2d3b6c;
+    --secondary-color: #c1cfff;
+    --dark-silver-color: #76745d;
+    --font-inter: "Inter", sans-serif;
+}
+
+.form-control:focus {
+    box-shadow: unset;
+}
+
+a,
+a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+/* max width 90% only in pc */
+@media only screen and (min-width: 768px) {
+    .container-pc-90 {
+        max-width: 90%;
+    }
+}
+
+/* @media only screen and (max-width: 768px){ */
+/* @media only screen and (min-width: 768.1px) and (max-width: 992px){ */
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.global-title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.global-subtitle {
+    text-align: center;
+    color: var(--dark-silver-color);
+    margin-bottom: 0px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+/* global css end */
+
+/* header start */
+#main-navbar {
+    background-color: var(--primary-color);
+    padding: 0;
+}
+
+#main-navbar .container {
+    position: relative;
+}
+
+#main-navbar .container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    right: calc(100% + -12px);
+}
+
+.nav-item .nav-link {
+    color: #fff;
+}
+
+.nav-item .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-brand {
+    background-color: var(--secondary-color);
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* header end */
+
+/* hero start */
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary-color);
+}
+
+.hero-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-caption h3 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+/* hero end */
+
+/* home about start */
+.ha-indicators {
+    display: grid;
+    bottom: 9%;
+    left: 75%;
+}
+
+.ha-indicators [data-bs-target] {
+    margin-top: -10px;
+}
+
+.ha-left {
+    padding-right: 2rem;
+}
+
+.ha-para {
+    line-height: 1.9rem;
+    font-family: var(--font-inter);
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.ha-btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 2rem;
+}
+.ha-btn:hover{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+.client-title {
+    font-weight: 500;
+}
+.client-subtitle {
+    color: #808080;
+}
+.ha-lines {
+    font-style: italic;
+    color: #808080;
+    margin-left: -22px;
+    margin-top: 15px;
+}
+/* home about end */
+
+/* home services start */
+.ss-div{
+    height: 35rem;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 2rem;
+    /* width: 100%; */
+    position: relative;
+    transition: all 0.4s;
+}
+.ss-div:after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0;
+  }
+.ss-div:hover{
+    align-items: flex-start;
+    transition: all 0.4s;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #01797a70;
+    background-blend-mode: screen;
+}
+.ss-inner-div{
+    z-index: 2;
+}
+.ss1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.ss2 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    margin-top: -0.6rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #ffffd1;
+}
+.ss3{
+    color: var(--secondary-color);
+}
+.ss-div:hover .ss1{
+    color: var(--secondary-color);
+}
+.ss-div:hover .ss3{
+    color: #fff;
+}
+.ss-btn {
+    display: none;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    padding: 0.2rem;
+    border: 1px solid #ffffd1;
+    animation: wave 1s ease-out;
+    animation-iteration-count: infinite;
+}
+.ss-btn img {
+    width: 35px;
+    height: 35px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    padding: 0.6rem;
+  }
+  .ss-div:hover .ss-btn {
+    display: block;
+  }
+  @keyframes wave {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      opacity: 2;
+    }
+    100% {
+      transform: scale(1.5, 1.5);
+      opacity: 0;
+    }
+  }
+
+/* home services end */
